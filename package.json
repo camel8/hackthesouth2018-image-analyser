@@ -1,0 +1,16 @@
+{
+  "name": "image-analyser",
+  "version": "1.0.0",
+  "description": "Text recognition and landmark guesser powered by Google Cloud Vision API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wing@Devtography",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
+}
