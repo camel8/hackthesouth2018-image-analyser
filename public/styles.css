@@ -1,5 +1,6 @@
-body {
+/*body {
     font-family: 'Open Sans';
+    margin-bottom: 10%;
  }
 
  .sidenav {
@@ -27,12 +28,12 @@ body {
  }
 
  .main {
-     margin-left: 20%; /* Same as the width of the sidenav */
+     margin-left: 20%;  Same as the width of the sidenav
      margin-right: 20%;
-     font-size: 20px; /* Increased text to enable scrolling */
+     font-size: 20px;  Increased text to enable scrolling
      padding: 0px 10px;
  }
- 
+
  .footer {
  position: fixed;
  left: 0;
@@ -48,3 +49,148 @@ body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
  }
+
+ p {
+   overflow: scroll;
+ }*/
+
+ body {
+    font-family: "Mina", monospace;
+    margin-bottom: 10%;
+ }
+
+ .sidenav {
+    height: 100%;
+    width: 1%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url(./funky-lines-dark.png);
+    overflow-x: hidden;
+    padding-top: 0%;
+    -webkit-transition: width 2s;
+    transition-duration: 1s;
+    transition-delay: 0.2s;
+ }
+ #.sidenav {-webkit-transition-timing-function: ease;}
+ .sidenav:hover {
+   width: 13%;
+ }
+
+ .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: "Mina", monospace;
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+    display: block;
+ }
+
+ .sidenav a:hover {
+    color: #ffffff;
+ }
+
+ .sidenav a1 {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-family: "Mina", monospace;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #000000;
+    display: block;
+ }
+
+ .main {
+   margin-left: 20%; /* Same as the width of the sidenav */
+   margin-right: 20%;
+   font-size: 20px; /* Increased text to enable scrolling */
+   padding: 0px 10px;
+ }
+
+ .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: white;
+   color: black;
+   text-align: center;
+ font-size: 11px;
+ }
+
+ @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+ }
+
+ h1 {
+   font-weight: 900;
+   font-family: "Mina", monospace;
+ }
+
+ .logo {
+   border: 2px solid rgb(180,180,180);
+   border-radius: 4px;
+   padding: 10px 10px;
+   background-color: white;
+ }
+
+ p {
+   background-color: rgb(220,220,220,0.5);
+   overflow: scroll;
+ }
+
+/* magic button */
+ .magicbutton {
+   font-family: "Mina", monospace;
+   font-size: 25px;
+   font-weight: bold;
+   padding: 10px 40px;
+   border-radius: 6px;
+   background-color: white;
+   color: black;
+   border: 2px solid black;
+   -webkit-transition-duration: 0.5s;
+   transition-duration: 0.5s;
+   cursor: pointer;
+ }
+
+ .magicbutton:hover {
+   background-image: url(./funky-lines-dark.png);
+   color: white; /* DOES NOT WORKKKKKK (TT_TT) */
+ }
+
+ .magicbutton:link {color: black; text-decoration: none;}
+ .magicbutton:active {color: white; text-decoration: none;}
+
+ .picinput {
+   background-color: darkgray;
+   font-size: 13px;
+   color: white;
+   font-family: "Mina", monospace;
+ }
+
+/* return to home button */
+.returnhome {
+  font-family: "Mina", monospace;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 27px;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.returnhome:hover {
+  background-image: url(./funky-lines-dark.png);
+  color: white; /* DOES NOT WORKKKKKK (TT_TT) */
+}
+
+.returnhome:link {color: black; text-decoration: none;}
+.returnhome:active {color: white; text-decoration: none;}

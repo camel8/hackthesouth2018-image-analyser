@@ -1,25 +1,35 @@
 doctype html
 html
   head
-    meta(content='width=device-width, initial-scale=1', name='viewport')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.12/css/all.css', integrity='sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Mina', rel='stylesheet')
     link(rel='stylesheet', href='styles.css')
-    title= title
+    meta(content='width=device-width, initial-scale=1', name='viewport')
   body(background='funky-lines.png')
     .sidenav
+      a1 MENU
       a(href="javascript:alert('Because%20why%20not?');") Why?
-      a(href='https://cloud.google.com/vision/') How?
+      a(onclick="alert('You will be redirected to a different page');", href='https://cloud.google.com/vision/') How?
     .main
       center
-        h1 Get that text
+        h1
+          // | GrabText
+          // i.fas.fa-hand-rock
+          img.logo(src='grabtext-logo.JPG', alt='logo', style='width:40%;height:40%')
         p
-          | Do you want to copy text but you can't highlight it? Is it in a jpeg or png? Then don't worry, we will give you a easy copiable version of the text you want!
-        form(action='/extractText' method='POST' enctype='multipart/form-data')
+          | Do you want to copy text but you can't highlight it? Is it in a .jpeg or .png? Then don't worry, we will give you an easy, copiable version of the text you want!
+        form(action='/extractText', method='POST', enctype='multipart/form-data')
           p
-            | Please specify a file, or a set of files:
+            | Please upload either a .jpeg or .png file below:
             br
             input(name='datafile', type='file', accept='image/png,image/jpeg')
           div
-            input(type='submit', value='Let the magic happen')
+            // <input class="magicbutton" type="submit" value="Let the magic happen">
+            button.magicbutton(type='submit')
+              a.magiclink Let the magic happen
+              i.fa.fa-angle-double-right(style='font-size: 20px;')
+            // a.magicbutton(href='file:///Users/Camel/Desktop/HackaSoton2018_then00bs-master/loader.html', onclick="document.getElementById('imageconv').submit();")
+              | Let the magic begin
+              i.fa.fa-angle-double-right(style='font-size: 20px;')
         .footer
-          p Created by: then00bs, Southampton 2018
-
+          p1 Created by: then00bs, Southampton 2018
