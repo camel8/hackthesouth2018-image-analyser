@@ -26,12 +26,19 @@ router.post('/extractText', upload.single('datafile'), (req, res) => {
   }
 
   client.documentTextDetection(req.file.buffer).then((response) => {
-    console.log(response);
-  }).catch((err) => {
-    console.error(err);
-  });
+    const results = response[0].fullTextAnnotation.text;
 
-  return res.send(req.file);
+    res.render('text-results', {
+      title: 'Results',
+      results,
+    });
+  }).catch(() => {
+    res.render('text-results', {
+      title: 'Results',
+      results: 'Sorry, we can\'t extract the text from the image uploaded.',
+    });
+  });
+  return res;
 });
 
 module.exports = router;
