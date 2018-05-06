@@ -13,7 +13,7 @@ html
         h1 Get that text
         p
           | Do you want to copy text but you can't highlight it? Is it in a jpeg or png? Then don't worry, we will give you a easy copiable version of the text you want!
-        form(action='')
+        form(action='/extractText' method='POST' enctype='multipart/form-data')
           p
             | Please specify a file, or a set of files:
             br
